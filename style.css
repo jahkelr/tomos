@@ -327,3 +327,25 @@ footer {
     grid-template-columns: 1fr; /* single column on very small devices */
   }
 }
+/* Prevent grid items from overflowing their columns */
+.services-list > * {
+  min-width: 0;          /* critical for CSS Grid */
+  max-width: 100%;
+}
+
+/* Extra hardening against long words/URLs and nested lists */
+.services-list li {
+  overflow-wrap: anywhere; /* modern */
+  word-break: break-word;  /* legacy fallback */
+}
+
+.services-list li > ul {
+  list-style-position: outside;
+  padding-left: 1.1rem;     /* already set, keep it tight */
+  margin: 0.25rem 0 0;
+}
+
+/* If you see vertical squish on some browsers, let items size to content */
+.services-list {
+  align-items: start; /* instead of stretch, prevents weird vertical tension */
+}
