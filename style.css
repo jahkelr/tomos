@@ -349,3 +349,74 @@ footer {
 .services-list {
   align-items: start; /* instead of stretch, prevents weird vertical tension */
 }
+/* ===== FIX: scope card styles to top-level items only ===== */
+
+/* Grid children are allowed to shrink to their track */
+.services-list > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Cards = only the first-level list items */
+.services-list > li {
+  background-color: #fff;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  transition: transform 120ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.services-list > li:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: #d9dee6;
+}
+
+.services-list > li:focus-within {
+  outline: none;
+  box-shadow: var(--shadow-lg);
+  border-color: var(--secondary-color);
+}
+
+/* Headings & text inside cards */
+.services-list > li h3 {
+  margin: 0 0 0.25rem;
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.services-list > li p {
+  margin: 0;
+  color: #555;
+  font-size: 0.96rem;
+}
+
+/* Inner bullet list should be plain text, not cards */
+.services-list > li > ul {
+  margin: 0.25rem 0 0;
+  padding-left: 1.1rem;
+  list-style: disc;
+}
+
+.services-list > li > ul > li {
+  margin: 0.25rem 0;
+  line-height: 1.45;
+
+  /* ensure inner bullets never inherit card visuals */
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  display: list-item;
+  padding: 0;
+  height: auto;
+  transform: none;
+}
