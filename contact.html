@@ -24,6 +24,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="consult.html">Consult</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
@@ -56,7 +57,7 @@
 
     <section class="info-section contact-form">
       <h3>Tell Us About Your Project</h3>
-      <form action="https://formsubmit.co/el/yusevi" method="POST">
+      <form id="contact-form" action="#">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
 
@@ -66,9 +67,8 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" required></textarea>
 
-        <!-- honeypot to prevent spam -->
-        <input type="hidden" name="_honey" style="display:none">
-        <button type="submit" class="btn-primary">Submit</button>
+        <button type="submit" class="btn-primary">Draft email to TOMOS</button>
+        <p class="contact-feedback" id="contact-feedback">Clicking send opens your email client in a new tab with the message pre-filled.</p>
       </form>
     </section>
   </main>
@@ -82,5 +82,55 @@
       <p>&copy; 2025 TOMOS. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var form = document.getElementById('contact-form');
+      if (!form) { return; }
+
+      var feedback = document.getElementById('contact-feedback');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var formData = new FormData(form);
+        var name = (formData.get('name') || '').trim();
+        var email = (formData.get('email') || '').trim();
+        var message = (formData.get('message') || '').trim();
+
+        if (!email || !message) {
+          if (feedback) {
+            feedback.textContent = 'Please provide both your email and a message before sending.';
+          }
+          return;
+        }
+
+        var subject = 'TOMOS Contact';
+        if (name) {
+          subject += ' - ' + name;
+        }
+
+        var bodyLines = [
+          'Name: ' + (name || 'N/A'),
+          'Email: ' + email,
+          '',
+          message
+        ];
+
+        var mailto = 'mailto:contact@tomos-solutions.com'
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(bodyLines.join('\n'));
+
+        var newTab = window.open(mailto, '_blank', 'noopener,noreferrer');
+
+        if (!newTab) {
+          window.location.href = mailto;
+        }
+
+        if (feedback) {
+          feedback.textContent = 'Opening your email client in a new tab. If nothing appears, check pop-up blockers or email us at contact@tomos-solutions.com.';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
