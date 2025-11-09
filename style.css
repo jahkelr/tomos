@@ -725,6 +725,118 @@ textarea { resize: vertical; min-height: 140px; }
   color: rgba(226, 232, 240, 0.85);
 }
 
+.service-tier {
+  padding-bottom: 3rem;
+}
+
+.tier-heading {
+  max-width: 720px;
+  margin-bottom: 1.75rem;
+}
+
+.tier-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: rgba(95, 212, 255, 0.85);
+  margin: 0 0 0.35rem;
+}
+
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.tier-card {
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 1.6rem;
+  background: rgba(4, 7, 15, 0.65);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.tier-card h4 {
+  margin: 0 0 0.75rem;
+  color: #f8fafc;
+  letter-spacing: -0.01em;
+}
+
+.tier-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.5rem;
+  color: var(--muted-text);
+}
+
+.tier-meta {
+  background: linear-gradient(160deg, rgba(95, 212, 255, 0.08), rgba(139, 92, 246, 0.15));
+  border-color: rgba(148, 163, 184, 0.35);
+  box-shadow: var(--shadow-sm);
+}
+
+.tier-value {
+  margin: 0 0 1rem;
+  color: var(--dark-text);
+  line-height: 1.55;
+}
+
+.tier-price {
+  margin-top: 1.25rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.comparison-section {
+  padding-bottom: 2.5rem;
+}
+
+.table-wrapper {
+  margin-top: 1.5rem;
+  overflow-x: auto;
+}
+
+.tier-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.tier-table th,
+.tier-table td {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 0.85rem 1rem;
+  text-align: left;
+  color: var(--muted-text);
+  background: rgba(5, 11, 22, 0.4);
+}
+
+.tier-table thead th {
+  background: rgba(15, 23, 42, 0.8);
+  color: #f8fafc;
+  font-family: var(--heading-font);
+  letter-spacing: 0.02em;
+}
+
+.tier-table th[scope="row"] {
+  font-weight: 600;
+  color: var(--dark-text);
+  background: rgba(15, 23, 42, 0.55);
+  width: 18%;
+}
+
+.tier-table tbody tr:nth-child(even) td,
+.tier-table tbody tr:nth-child(even) th {
+  background: rgba(8, 14, 26, 0.65);
+}
+
 .service-grid,
 .engagement-grid {
   display: grid;
@@ -809,6 +921,12 @@ textarea { resize: vertical; min-height: 140px; }
   .service-cta .btn-primary {
     width: 100%;
     justify-content: center;
+  }
+  .tier-grid {
+    grid-template-columns: 1fr;
+  }
+  .tier-table {
+    min-width: 480px;
   }
 }
 

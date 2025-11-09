@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Automation Consulting | TOMOS</title>
+  <title>Automation Services | TOMOS</title>
+  <meta http-equiv="refresh" content="0; url=services.html">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      window.location.replace('services.html');
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -22,9 +28,8 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
           <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="consult.html" class="active">Consult</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -32,92 +37,10 @@
   </header>
 
   <main class="container">
-    <section class="page-header audit-hero">
-      <h2>Automation Consulting Tiers</h2>
-      <p>Choose the engagement level that matches your automation journey—from a quick-turn audit to ongoing orchestration.</p>
-      <div class="audit-cta">
-        <a class="btn-primary" href="mailto:j@tomos-solutions.com?subject=Automation%20Consultation%20with%20TOMOS">Talk through the tiers</a>
-        <span class="audit-price-tag">Start with Audit, scale into Core Automations, and stay supported with Automation Management.</span>
-      </div>
-    </section>
-
     <section class="info-section">
-      <h3>The three-tier model</h3>
-      <div class="audit-grid">
-        <article class="audit-card">
-          <h4>Audit</h4>
-          <p>10-business-day assessment that uncovers the highest-impact automation opportunities in your workflows.</p>
-          <ul>
-            <li>Workflow discovery sessions with key stakeholders</li>
-            <li>Process maps contrasting current and automated future states</li>
-            <li>Prioritized backlog of 3–5 initiatives with complexity and impact scoring</li>
-            <li>ROI forecast detailing savings assumptions and quick wins</li>
-          </ul>
-          <p><strong>Investment:</strong> $500 flat</p>
-        </article>
-        <article class="audit-card">
-          <h4>Core Automations</h4>
-          <p>4–6 week build cycles that ship the highest-value automations identified during the audit.</p>
-          <ul>
-            <li>Solution design aligned to your stack, data, and compliance requirements</li>
-            <li>Implementation of up to three priority workflows with QA and documentation</li>
-            <li>Change enablement support so teams adopt the new ways of working</li>
-            <li>Knowledge transfer for your operators or internal developers</li>
-          </ul>
-          <p><strong>Investment:</strong> $1,500 per sprint</p>
-        </article>
-        <article class="audit-card">
-          <h4>Automation Management</h4>
-          <p>Ongoing program management that keeps your automations healthy, compliant, and expanding.</p>
-          <ul>
-            <li>Dedicated automation lead with monthly performance reviews</li>
-            <li>Proactive break/fix, model tuning, and integration monitoring</li>
-            <li>Quarterly roadmap planning with new use case launches</li>
-            <li>Governance support across security, data quality, and policy updates</li>
-          </ul>
-          <p><strong>Investment:</strong> Retainers starting at $2,500/mo</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="info-section">
-      <h3>Where each tier fits</h3>
-      <ul class="values-list">
-        <li><strong>Audit:</strong> Perfect when you need a quantified business case, stakeholder alignment, and a clear starting point.</li>
-        <li><strong>Core Automations:</strong> Ideal for teams ready to implement production-ready workflows without overloading internal engineers.</li>
-        <li><strong>Automation Management:</strong> Best for organizations who want ongoing ownership, proactive optimization, and roadmap execution.</li>
-      </ul>
-    </section>
-
-    <section class="info-section">
-      <h3>How engagements progress</h3>
-      <ol class="audit-steps">
-        <li>
-          <div class="step-title">Discovery & prioritization</div>
-          <p>We capture your goals, existing tooling, and success metrics during a 60-minute consult to confirm fit.</p>
-        </li>
-        <li>
-          <div class="step-title">Audit delivery</div>
-          <p>You receive the process maps, backlog, and ROI model that guide near-term automation bets.</p>
-        </li>
-        <li>
-          <div class="step-title">Core implementation sprints</div>
-          <p>We design, build, and launch the highest-leverage automations with testing, documentation, and enablement.</p>
-        </li>
-        <li>
-          <div class="step-title">Automation Management</div>
-          <p>We operate and optimize the automations, monitor performance, and keep the roadmap moving.</p>
-        </li>
-      </ol>
-    </section>
-
-    <section class="info-section audit-next">
-      <h3>Ready to choose your tier?</h3>
-      <p>Whether you just need the audit or want full program ownership, TOMOS adapts to the depth of support you require.</p>
-      <div class="audit-next-cta">
-        <a class="btn-primary" href="mailto:j@tomos-solutions.com?subject=Automation%20Consultation%20with%20TOMOS">Book a 15-minute consultation</a>
-        <p class="audit-slot-note">We hold limited onboarding slots each month to maintain hands-on delivery quality.</p>
-      </div>
+      <h2>Consulting is now part of Services</h2>
+      <p>We merged the Services and Consult experiences into a single page that walks through every tier&mdash;Audit, Core Implementation, and Automation Management&mdash;along with pricing and comparison details.</p>
+      <a class="btn-primary" href="services.html">Explore the services page</a>
     </section>
   </main>
 
