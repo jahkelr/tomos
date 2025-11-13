@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | TOMOS</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html" class="logo-link" aria-label="TOMOS home">
+          <img src="Tomos-logo.png" alt="" aria-hidden="true">
+          <span class="logo-wordmark">TOMOS</span>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-header products-hero">
+      <p class="page-kicker">Automation Suite</p>
+      <h2>Products that capture context, ship content, and operationalize outreach</h2>
+      <p>Each automation is production-ready, reuses the same FastAPI conventions, and can slot into your workflows with minimal lift. Pick the service you need now or run the full stack for end-to-end automation.</p>
+      <div class="products-hero-cta">
+        <a class="btn-primary" href="https://github.com/jahkelr/tomos-automations" target="_blank" rel="noopener">Explore the technical repo</a>
+        <span class="products-hero-note">FastAPI · SQLModel · Redis/RQ · Chroma · `.env` driven configs</span>
+      </div>
+    </section>
+
+    <section class="info-section product-overview">
+      <h3>How TOMOS ships automations</h3>
+      <p>The products below were built for operators who need clarity, observability, and maintainability—not lab demos. They share deployment patterns, authentication, and monitoring so you can run them side-by-side without glue work.</p>
+      <ul class="product-highlights">
+        <li><strong>Shared conventions:</strong> Python 3.11, Alembic migrations, Prometheus-ready metrics, and deterministic fallbacks for CI.</li>
+        <li><strong>Job-ready:</strong> Docker Compose targets spin up APIs, workers, Postgres, Redis, and Chroma with one command.</li>
+        <li><strong>Governed access:</strong> `.env.example` files document the secrets you need; API keys, queues, and schema live in version control.</li>
+      </ul>
+    </section>
+
+    <section class="product-grid" aria-label="Automation products">
+      <article class="product-card">
+        <p class="product-label">Automation 01</p>
+        <h3>Tenant Context Service (TCS)</h3>
+        <p class="product-summary">Multi-tenant content memory that crawls your approved sources, canonicalizes the knowledge graph, and exposes retrieval APIs for downstream apps.</p>
+        <ul class="product-points">
+          <li>Crawls websites, RSS feeds, and static docs, then embeds and normalizes every chunk per tenant.</li>
+          <li>Hybrid BM25 + vector search with API-key authentication, canonicalized entities, and metrics at `/metrics`.</li>
+          <li>Docker Compose stack boots API, worker, Postgres, Redis, and Chroma with `make up` plus optional demo seed.</li>
+        </ul>
+        <div class="product-links">
+          <a class="link-more" href="https://github.com/jahkelr/tomos-automations/tree/main/tcs" target="_blank" rel="noopener">View TCS docs</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <p class="product-label">Automation 02</p>
+        <h3>Product Description Engine (PDE)</h3>
+        <p class="product-summary">Takes product imagery + metadata, blends it with TCS-derived tone, and delivers SEO-ready copy across channels.</p>
+        <ul class="product-points">
+          <li>Uses OpenCLIP/BLIP (or deterministic fallbacks) to describe images before handing context to your preferred LLM.</li>
+          <li>Supports synchronous `/pde/generate` calls plus async ingestion queues for bulk batches over Redis/RQ.</li>
+          <li>`make seed` provisions a demo tenant, brand profile, and sample product so stakeholders can review outputs fast.</li>
+        </ul>
+        <div class="product-links">
+          <a class="link-more" href="https://github.com/jahkelr/tomos-automations/tree/main/pde" target="_blank" rel="noopener">View PDE docs</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <p class="product-label">Automation 03</p>
+        <h3>TOMOS Doc Intelligence (TDI)</h3>
+        <p class="product-summary">Answers policy and operations questions with citations by ingesting PDFs, DOCX, HTML, Markdown, and raw text.</p>
+        <ul class="product-points">
+          <li>Parses unstructured docs, chunks + embeds them into Chroma namespaces, and stores metadata in Postgres.</li>
+          <li>Ships `/tdi/ask`, summarize, and draft endpoints plus feedback capture so SMEs can grade outputs.</li>
+          <li>Worker + API split keeps ingestion responsive, and `make seed` loads sample policies for instant validation.</li>
+        </ul>
+        <div class="product-links">
+          <a class="link-more" href="https://github.com/jahkelr/tomos-automations/tree/main/tdi" target="_blank" rel="noopener">View TDI docs</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <p class="product-label">Automation 04</p>
+        <h3>Messaging Service</h3>
+        <p class="product-summary">Lightweight UI + API for editing templates and delivering personalized email/SMS campaigns without introducing yet another marketing suite.</p>
+        <ul class="product-points">
+          <li>Template editor with live previews, CSV list ingestion, deduplication, and a persisted fallback mailing list.</li>
+          <li>`/send` delivers Gmail-backed personalized emails, `/send-text` logs SMS payloads for future provider wiring.</li>
+          <li>FastAPI UI served at `/` with health checks for orchestration plus `.env` hooks for SMTP credentials.</li>
+        </ul>
+        <div class="product-links">
+          <a class="link-more" href="https://github.com/jahkelr/tomos-automations/tree/main/messaging-service" target="_blank" rel="noopener">View Messaging docs</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="info-section product-cta">
+      <h3>Ready for a live walkthrough?</h3>
+      <p>We can demo any combination of services, tailor them to your environment, or extend the stack with net-new automations.</p>
+      <div class="product-cta-actions">
+        <a class="btn-primary" href="mailto:j@tomos-solutions.com?subject=TOMOS%20Products%20Walkthrough">Book a 30-minute session</a>
+        <span class="product-cta-note">We bring technical deep dives, ROI conversations, and rollout plans.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="Tomos-logo.png" alt="" aria-hidden="true">
+        <span class="logo-wordmark">TOMOS</span>
+      </div>
+      <p>&copy; 2025 TOMOS. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
