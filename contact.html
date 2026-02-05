@@ -3,67 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | TOMOS</title>
+  <title>Contact Tomos | Software and AI Studio</title>
+  <meta name="description" content="Contact Tomos to discuss product engineering, platform development, or applied AI delivery.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="logo">
-        <a href="index.html" class="logo-link" aria-label="TOMOS home">
-          <img src="Tomos-logo.png" alt="" aria-hidden="true">
-          <span class="logo-wordmark">TOMOS</span>
-        </a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a href="index.html" class="brand" aria-label="Tomos home">
+        <img src="Tomos-logo.png" alt="Tomos logo">
+        <div>
+          <span class="brand-word">Tomos</span>
+          <span class="brand-tag">Software + AI</span>
+        </div>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="case-studies.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
       </nav>
+      <a class="btn btn-primary header-cta" href="contact.html">Start a project</a>
     </div>
   </header>
 
-  <main class="container">
-    <section class="page-header">
-      <h2>Contact Us</h2>
-      <p>Ready to launch or scale your automation program? Reach out and let's build the roadmap together.</p>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1>Tell us about the product you want to build.</h1>
+        <p>Share a quick overview of your goals, timeline, and where AI might fit. We will respond with a tailored next step.</p>
+      </div>
     </section>
 
-    <section class="info-section contact-form">
-      <h3>Tell Us About Your Project</h3>
-      <form id="contact-form" action="#">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-card">
+            <span>Email</span>
+            <strong>contact@tomos-solutions.com</strong>
+            <p>We respond within 2 business days.</p>
+          </div>
+          <div class="contact-card">
+            <span>Location</span>
+            <strong>Remote-first</strong>
+            <p>Serving teams across the US and Europe.</p>
+          </div>
+          <div class="contact-card">
+            <span>Engagement</span>
+            <strong>Discovery to delivery</strong>
+            <p>Short sprints or full build partnerships.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+    <section class="section">
+      <div class="container callout">
+        <h2>Project inquiry</h2>
+        <p>Fill out the form and we will draft an email to our team.</p>
+        <form id="contact-form" action="#">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name">
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@company.com" required>
 
-        <button type="submit" class="btn-primary">Draft email to TOMOS</button>
-        <p class="contact-feedback" id="contact-feedback">Clicking send opens your email client in a new tab with the message pre-filled.</p>
-      </form>
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" placeholder="Company or team name">
+
+          <label for="project">Project type</label>
+          <select id="project" name="project">
+            <option value="Product engineering">Product engineering</option>
+            <option value="Platform and data">Platform and data</option>
+            <option value="Applied AI">Applied AI</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+
+          <label for="message">Project details</label>
+          <textarea id="message" name="message" placeholder="What are you building and when do you want to launch?" required></textarea>
+
+          <button type="submit" class="btn btn-primary">Draft email to Tomos</button>
+          <p class="contact-feedback" id="contact-feedback">Submitting opens your email client with the details pre-filled.</p>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-content">
+  <footer class="site-footer">
+    <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="Tomos-logo.png" alt="" aria-hidden="true">
-        <span class="logo-wordmark">TOMOS</span>
+        <img src="Tomos-logo.png" alt="Tomos logo">
+        <div>
+          <span class="brand-word">Tomos</span>
+          <span class="brand-tag">Software + AI</span>
+        </div>
       </div>
-      <p>&copy; 2025 TOMOS. All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="services.html">Services</a>
+        <a href="case-studies.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <span class="footer-note">Copyright 2026 Tomos. All rights reserved.</span>
     </div>
   </footer>
+
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var form = document.getElementById('contact-form');
@@ -77,23 +126,27 @@
         var formData = new FormData(form);
         var name = (formData.get('name') || '').trim();
         var email = (formData.get('email') || '').trim();
+        var company = (formData.get('company') || '').trim();
+        var project = (formData.get('project') || '').trim();
         var message = (formData.get('message') || '').trim();
 
         if (!email || !message) {
           if (feedback) {
-            feedback.textContent = 'Please provide both your email and a message before sending.';
+            feedback.textContent = 'Please include your email and a brief project summary.';
           }
           return;
         }
 
-        var subject = 'TOMOS Contact';
-        if (name) {
-          subject += ' - ' + name;
+        var subject = 'Tomos project inquiry';
+        if (company) {
+          subject += ' - ' + company;
         }
 
         var bodyLines = [
           'Name: ' + (name || 'N/A'),
           'Email: ' + email,
+          'Company: ' + (company || 'N/A'),
+          'Project type: ' + (project || 'N/A'),
           '',
           message
         ];
@@ -109,7 +162,7 @@
         }
 
         if (feedback) {
-          feedback.textContent = 'Opening your email client in a new tab. If nothing appears, check pop-up blockers or email us at contact@tomos-solutions.com.';
+          feedback.textContent = 'Opening your email client now. If nothing appears, email us at contact@tomos-solutions.com.';
         }
       });
     });

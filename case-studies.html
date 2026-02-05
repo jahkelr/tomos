@@ -3,57 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Case Studies | TOMOS</title>
+  <title>Work | Tomos Software and AI Studio</title>
+  <meta name="description" content="Real software and AI engagements delivered by Tomos.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="logo">
-        <a href="index.html" class="logo-link" aria-label="TOMOS home">
-          <img src="Tomos-logo.png" alt="" aria-hidden="true">
-          <span class="logo-wordmark">TOMOS</span>
-        </a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="case-studies.html" class="active">Case Studies</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a href="index.html" class="brand" aria-label="Tomos home">
+        <img src="Tomos-logo.png" alt="Tomos logo">
+        <div>
+          <span class="brand-word">Tomos</span>
+          <span class="brand-tag">Software + AI</span>
+        </div>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="case-studies.html" class="active">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
+      <a class="btn btn-primary header-cta" href="contact.html">Start a project</a>
     </div>
   </header>
-  <main class="container">
-    <section class="page-header">
-      <h2>Case Studies</h2>
-      <p>Our client success stories are coming soon. We're curating the most impactful examples of how TOMOS drives automation ROI across operations, revenue, and customer experience teams.</p>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Work</p>
+        <h1>Real client work, delivered with care.</h1>
+        <p>This page highlights active engagements and finished projects. More case studies will be added as clients give permission to share.</p>
+      </div>
     </section>
 
-    <section class="info-section">
-      <h3>What We're Showcasing Next</h3>
-      <ul class="values-list">
-        <li><strong>Operational intelligence:</strong> Automations that reduce handoffs and unlock double-digit cycle time savings.</li>
-        <li><strong>Insight acceleration:</strong> NLP-driven summaries that give teams instant clarity on complex documents.</li>
-        <li><strong>Responsible AI:</strong> Governance-first deployments that meet stringent compliance and security standards.</li>
-      </ul>
-      <a href="contact.html" class="link-more">Partner with our team</a>
+    <section class="section">
+      <div class="container">
+        <div class="case-grid">
+          <article class="case-card">
+            <div class="case-top">
+              <span class="tag">Retail</span>
+              <span class="tag">Shopify</span>
+              <span class="tag">AI content</span>
+            </div>
+            <h3>Da World boutique Shopify management and AI product content</h3>
+            <p class="case-summary">Managed the Shopify storefront and used LLMs to update product information, improve SEO, and align the brand voice.</p>
+            <div class="case-detail">
+              <h4>Scope</h4>
+              <p>One-month engagement managing the Shopify site and updating a 500-product catalog.</p>
+            </div>
+            <div class="case-detail">
+              <h4>Approach</h4>
+              <p>Used custom prompts with the open source LLaVA model to draft and standardize product descriptions, then refined copy to fit the boutique's brand identity.</p>
+            </div>
+            <div class="case-detail">
+              <h4>Outcome</h4>
+              <ul class="impact-list">
+                <li>Refreshed product information across the storefront</li>
+                <li>Established a repeatable workflow for updating descriptions</li>
+                <li>Strengthened SEO-friendly product copy and consistent brand voice</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container callout centered">
+        <h2>Want to build something similar?</h2>
+        <p>We can tailor a delivery plan that matches your product goals, data environment, and AI readiness.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html">Start a project</a>
+          <a class="btn btn-ghost" href="services.html">Review services</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-content">
+  <footer class="site-footer">
+    <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="Tomos-logo.png" alt="" aria-hidden="true">
-        <span class="logo-wordmark">TOMOS</span>
+        <img src="Tomos-logo.png" alt="Tomos logo">
+        <div>
+          <span class="brand-word">Tomos</span>
+          <span class="brand-tag">Software + AI</span>
+        </div>
       </div>
-      <p>&copy; 2025 TOMOS. All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="services.html">Services</a>
+        <a href="case-studies.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <span class="footer-note">Copyright 2026 Tomos. All rights reserved.</span>
     </div>
   </footer>
 </body>
