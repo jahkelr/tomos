@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Tomos | Software and AI Studio</title>
-  <meta name="description" content="Contact Tomos to discuss product engineering, platform development, or applied AI delivery.">
+  <title>Contact Tomos | Revenue and Operations Systems</title>
+  <meta name="description" content="Book a workflow audit with Tomos. Discuss operational automation for your clinic or retail business.">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
@@ -21,17 +21,18 @@
         <img src="Tomos-logo.png" alt="Tomos logo">
         <div>
           <span class="brand-word">Tomos</span>
-          <span class="brand-tag">Software + AI</span>
+          <span class="brand-tag">Revenue + Operations</span>
         </div>
       </a>
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="case-studies.html">Work</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="process.html">Process</a>
         <a href="about.html">About</a>
         <a href="contact.html" class="active">Contact</a>
       </nav>
-      <a class="btn btn-primary header-cta" href="contact.html">Start a project</a>
+      <a class="btn btn-primary header-cta" href="contact.html">Book audit</a>
     </div>
   </header>
 
@@ -39,8 +40,8 @@
     <section class="page-hero">
       <div class="container">
         <p class="eyebrow">Contact</p>
-        <h1>Tell us about the product you want to build.</h1>
-        <p>Share a quick overview of your goals, timeline, and where AI might fit. We will respond with a tailored next step.</p>
+        <h1>Book a workflow audit or discuss your operations.</h1>
+        <p>Tell us about the operational bottlenecks costing you revenue and staff time. We'll respond within 1 business day with next steps.</p>
       </div>
     </section>
 
@@ -50,17 +51,17 @@
           <div class="contact-card">
             <span>Email</span>
             <strong>contact@tomos-solutions.com</strong>
-            <p>We respond within 2 business days.</p>
+            <p>Response within 1 business day</p>
           </div>
           <div class="contact-card">
-            <span>Location</span>
-            <strong>Remote-first</strong>
-            <p>Serving teams across the US and Europe.</p>
+            <span>Typical engagement</span>
+            <strong>2-week audit + 4-6 week build</strong>
+            <p>Fixed scope, measurable outcomes</p>
           </div>
           <div class="contact-card">
-            <span>Engagement</span>
-            <strong>Discovery to delivery</strong>
-            <p>Short sprints or full build partnerships.</p>
+            <span>Who we serve</span>
+            <strong>Clinics and retail brands</strong>
+            <p>Focused on revenue and operations systems</p>
           </div>
         </div>
       </div>
@@ -68,30 +69,48 @@
 
     <section class="section">
       <div class="container callout">
-        <h2>Project inquiry</h2>
-        <p>Fill out the form and we will draft an email to our team.</p>
+        <h2>Workflow audit request</h2>
+        <p>Fill out this form and we'll draft an email to our team. We'll respond within 1 business day to schedule a discussion.</p>
         <form id="contact-form" action="#">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name">
+          <input type="text" id="name" name="name" placeholder="Your name" required>
 
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="you@company.com" required>
 
-          <label for="company">Company</label>
-          <input type="text" id="company" name="company" placeholder="Company or team name">
+          <label for="company">Business name</label>
+          <input type="text" id="company" name="company" placeholder="Clinic or brand name" required>
 
-          <label for="project">Project type</label>
-          <select id="project" name="project">
-            <option value="Product engineering">Product engineering</option>
-            <option value="Platform and data">Platform and data</option>
-            <option value="Applied AI">Applied AI</option>
-            <option value="Not sure yet">Not sure yet</option>
+          <label for="vertical">Your industry</label>
+          <select id="vertical" name="vertical" required>
+            <option value="">Select your vertical</option>
+            <option value="Clinic / Healthcare">Clinic / Healthcare</option>
+            <option value="Retail / Ecommerce">Retail / Ecommerce</option>
+            <option value="Other">Other</option>
           </select>
 
-          <label for="message">Project details</label>
-          <textarea id="message" name="message" placeholder="What are you building and when do you want to launch?" required></textarea>
+          <label for="team-size">Team size</label>
+          <select id="team-size" name="team-size" required>
+            <option value="">Select team size</option>
+            <option value="1-5">1-5 people</option>
+            <option value="6-15">6-15 people</option>
+            <option value="16-50">16-50 people</option>
+            <option value="50+">50+ people</option>
+          </select>
 
-          <button type="submit" class="btn btn-primary">Draft email to Tomos</button>
+          <label for="problem">What operational bottleneck costs you the most time or revenue?</label>
+          <textarea id="problem" name="problem" placeholder="Example: We lose 15-20% of appointments to no-shows, and our staff spends 10 hours/week on manual reminder calls." required></textarea>
+
+          <label for="timeline">When do you want to start?</label>
+          <select id="timeline" name="timeline" required>
+            <option value="">Select timeline</option>
+            <option value="ASAP">ASAP (within 2 weeks)</option>
+            <option value="Next month">Next month</option>
+            <option value="Next quarter">Next quarter</option>
+            <option value="Just exploring">Just exploring</option>
+          </select>
+
+          <button type="submit" class="btn btn-primary">Send inquiry to Tomos</button>
           <p class="contact-feedback" id="contact-feedback">Submitting opens your email client with the details pre-filled.</p>
         </form>
       </div>
@@ -104,12 +123,13 @@
         <img src="Tomos-logo.png" alt="Tomos logo">
         <div>
           <span class="brand-word">Tomos</span>
-          <span class="brand-tag">Software + AI</span>
+          <span class="brand-tag">Revenue + Operations</span>
         </div>
       </div>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="services.html">Services</a>
-        <a href="case-studies.html">Work</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="process.html">Process</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -131,28 +151,33 @@
         var name = (formData.get('name') || '').trim();
         var email = (formData.get('email') || '').trim();
         var company = (formData.get('company') || '').trim();
-        var project = (formData.get('project') || '').trim();
-        var message = (formData.get('message') || '').trim();
+        var vertical = (formData.get('vertical') || '').trim();
+        var teamSize = (formData.get('team-size') || '').trim();
+        var problem = (formData.get('problem') || '').trim();
+        var timeline = (formData.get('timeline') || '').trim();
 
-        if (!email || !message) {
+        if (!name || !email || !company || !vertical || !teamSize || !problem || !timeline) {
           if (feedback) {
-            feedback.textContent = 'Please include your email and a brief project summary.';
+            feedback.textContent = 'Please fill out all required fields.';
           }
           return;
         }
 
-        var subject = 'Tomos project inquiry';
-        if (company) {
-          subject += ' - ' + company;
-        }
+        var subject = 'Workflow Audit Request - ' + company;
 
         var bodyLines = [
-          'Name: ' + (name || 'N/A'),
-          'Email: ' + email,
-          'Company: ' + (company || 'N/A'),
-          'Project type: ' + (project || 'N/A'),
+          'WORKFLOW AUDIT REQUEST',
           '',
-          message
+          'Name: ' + name,
+          'Email: ' + email,
+          'Business: ' + company,
+          'Industry: ' + vertical,
+          'Team size: ' + teamSize,
+          '',
+          'OPERATIONAL BOTTLENECK:',
+          problem,
+          '',
+          'Timeline: ' + timeline
         ];
 
         var mailto = 'mailto:contact@tomos-solutions.com'
